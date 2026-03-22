@@ -48,8 +48,9 @@ In this project, I used JavaScript array methods instead of traditional loops:
 
 ## Project Structure
 
+``` markdown
 library/
-│── index.html
+│── index.html                         
 │── explore.html
 │── favorites.html
 │── about.html
@@ -66,7 +67,7 @@ library/
 │   └── images/
 │
 └── README.md
-
+```
 ---
 
 ## How to Run the Project
