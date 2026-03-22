@@ -102,4 +102,5 @@ library/
 ## Author
 
 Prince Chhikara
+
 This project was developed as part of a JavaScript assignment.
