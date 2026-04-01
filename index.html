@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
-<body>
-    
+<body class="dark-theme">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Library</div>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search for books by title...">
+        </div>
+        <div class="nav-controls">
+            <button id="toggleBtn">Light Mode</button>
+            <button id="favoriteBtn">Veiw Favorites</button>
+        </div>
+    </nav>
+    <h1>Products</h1>
+    <div id="container"></div>
+    <script src="./script.js"></script>
 </body>
 </html>
