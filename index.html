@@ -7,19 +7,79 @@
     <title>Document</title>
 </head>
 <body class="dark-theme">
-    <!-- Navbar -->
+
+
+
     <nav class="navbar">
         <div class="logo">Library</div>
         <div class="search">
             <input type="text" id="searchInput" placeholder="Search for books by title...">
         </div>
         <div class="nav-controls">
-            <button id="toggleBtn">Light Mode</button>
-            <button id="favoriteBtn">Veiw Favorites</button>
+            <button id="toggleBtn" class="btn-outline">Light Mode</button>
+            <button id="favoriteBtn" class="btn-outline">Veiw Favorites</button>
         </div>
     </nav>
-    <h1>Products</h1>
-    <div id="container"></div>
+
+
+
+
+    <div class="controls-panel">
+        <div class="filter-group">
+            <label for="yearFilter">Filter by Year:</label>
+            <input type="number" id="yearFilter" placeholder="e.g. 2023">
+        </div>
+        <div class="sort-group">
+            <label for="sortSelect">Sort By:</label>
+            <select id="sortSelect">
+                <option value="relevance">Relevance</option>
+                <option value="titleAsc">Title (A-Z)</option>
+                <option value="titleDesc">Title (Z-A)</option>
+                <option value="yearDesc">Newest First</option>
+                <option value="yearAsc">Oldest First</option>
+            </select>
+        </div>
+        <div class="limit-group">
+            <label for="limitSelect">Show:</label>
+            <select id="limitSelect">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50" selected>50</option>
+            </select>
+        </div>
+        <div class="reset-group">
+            <button id="resetFiltersBtn" class="btn-outline">Reset Filters</button>
+        </div>
+    </div>
+    <!-- <div id="activeFiltersContainer" class="active-filters"></div> -->
+
+
+
+    <header class="hero">
+        <h1>Discover Books</h1>
+        <p>Search and explore a curated library collection</p>
+    </header>
+
+
+    <!-- main -->
+
+
+    <main class="main-content">
+        <div id="loadingState" class="state-container hidden">
+            <div class="spinner"></div>
+            <p>Searching the archives...</p>
+        </div>
+        <div id="emptyState" class="state-container hidden">
+            <p id="emptyMessage">No books found. Try a different search.</p>
+        </div>
+        <div id="bookGrid" class="book-grid"></div>
+    </main>
+
+    
+    <!-- book details -->
+
+
     <script src="./script.js"></script>
+
 </body>
 </html>
