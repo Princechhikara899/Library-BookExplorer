@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./CSS Folder/style.css">
     <title>Document</title>
 </head>
 <body class="dark-theme">
@@ -11,13 +11,13 @@
 
 
     <nav class="navbar">
-        <div class="logo">Library</div>
-        <div class="search">
+        <div class="nav-brand">Library</div>
+        <div class="nav-search">
             <input type="text" id="searchInput" placeholder="Search for books by title...">
         </div>
         <div class="nav-controls">
             <button id="toggleBtn" class="btn-outline">Light Mode</button>
-            <button id="favoriteBtn" class="btn-outline">Veiw Favorites</button>
+            <button id="favoriteBtn" class="btn-outline">View Favorites</button>
         </div>
     </nav>
 
@@ -51,7 +51,7 @@
             <button id="resetFiltersBtn" class="btn-outline">Reset Filters</button>
         </div>
     </div>
-    <!-- <div id="activeFiltersContainer" class="active-filters"></div> -->
+    <div id="activeFiltersContainer" class="active-filters"></div>
 
 
 
@@ -61,7 +61,7 @@
     </header>
 
 
-    <!-- main -->
+
 
 
     <main class="main-content">
@@ -76,10 +76,34 @@
     </main>
 
     
-    <!-- book details -->
 
+    <div id="bookModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="closeModalBtn" class="close-btn">&times;</button>
+        
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalCover" src="" alt="Book Cover" class="modal-cover">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle">Book Title</h2>
+                    <h4 id="modalAuthor" class="author-text">Author Name</h4>
+                    <p id="modalYear" class="year-text">Publish Year: <span></span></p>
+                    
+                    <div class="tags-container" id="modalSubjects"></div>
+                
+                    <div class="description-container">
+                        <h3>Description</h3>
+                        <p id="modalDescription">Loading description...</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
 
-    <script src="./script.js"></script>
+    <script src="./JS Folder/script.js"></script>
 
 </body>
 </html>

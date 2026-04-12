@@ -1,106 +1,95 @@
-# Library
+# 📚 Book Explorer Library
 
-## Project Overview
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-Library is a web application where users can explore and discover books using a public API. The idea behind this project is to create a simple and clean interface that feels like browsing through a digital library. Users can search for books, view details, and manage their own list of favorites.
+## 📌 Project Overview
 
----
+**Book Explorer Library** is a robust, dynamic, and fully responsive single-page web application that allows users to discover, search, and manage a vast collection of books. Designed with a premium aesthetic and rich user interaction in mind, it provides a seamless experience for finding books, viewing detailed information, and saving favorites—all powered by real-time data from the **Open Library API**.
 
-## Objective
+This project represents the culminating milestone for the web development curriculum, demonstrating advanced vanilla JavaScript concepts, RESTful API integration, and modern UI/UX design.
 
-The purpose of this project is to apply what I have learned in JavaScript, especially working with APIs and handling data using array methods. It also focuses on building a responsive and user-friendly interface.
-
----
-
-## Features
-
-* Search for books using keywords like title or author
-* Browse a collection of books fetched from the API
-* Filter books based on publish year or author
-* Sort books by newest, oldest, or alphabetical order
-* Add and remove books from a favorites list
-* Works on different screen sizes (mobile, tablet, desktop)
+## 🎯 Objectives & Milestones Achieved
+- **Milestone 1:** Project setup, UI foundation, and README documentation.
+- **Milestone 2:** Seamless API integration using `fetch()` and handling dynamic data.
+- **Milestone 3:** Core interactivity using Array Higher-Order Functions (`map`, `filter`, `sort`, `find`).
+- **Milestone 4:** Final codebase refactoring, cleanup, and documentation.
 
 ---
 
-## API Used
+## ✨ Core Features
 
-This project uses the Open Library Search API.
-
-Base URL:
-https://openlibrary.org/search.json
-
-
-The API provides information such as book titles, authors, publish years, cover images, and edition details.
-
----
-
-## Use of Higher-Order Functions
-
-In this project, I used JavaScript array methods instead of traditional loops:
-
-* map() to display book data on the page
-* filter() for searching and filtering results
-* sort() to arrange books in different orders
-* find() to manage the favorites list
+- 🔍 **Real-Time Search**: Search for books by title or author instantly.
+- 🗂️ **Dynamic Filtering**: Filter the retrieved book library precisely by the publish year.
+- 🔃 **Custom Sorting**: Sort the results by relevance, title (A-Z/Z-A), or publish year (Newest/Oldest).
+- ⭐ **Favorites System**: Allow users to 'favorite' books to view them in their personalized curated collection. 
+- 🌓 **Theme Toggle**: A fully integrated Light/Dark mode toggle for improved accessibility and user experience.
+- 📱 **Responsive Design**: Fluid and modern layout tailored for Desktop, Tablet, and Mobile screens.
 
 ---
 
-## Project Structure
+## ⚡ Bonus Features Implemented
 
-``` markdown
-library/
-│── index.html                         
-│── explore.html
-│── favorites.html
-│── about.html
-│
-│── css/
-│   └── style.css
-│
-│── js/
-│   ├── app.js
-│   ├── api.js
-│   └── utils.js
-│
-│── assets/
-│   └── images/
-│
-└── README.md
-```
+To enhance performance and user experience, several advanced optimizations were included:
+- **Debouncing**: Applied to the search input field to prevent excessive, unnecessary API requests on every keystroke, limiting API calls effectively.
+- **Loading Indicators**: Visual feedback (spinner/loading text) presented to the user while fetching API data.
+- **Active Filter Tags**: Dynamic UI elements showing current filters, with the ability to clear them instantly.
+- **Modal Overlays**: A detailed expanded view fetching additional descriptive text and subjects for each clicked book.
+
 ---
 
-## How to Run the Project
+## 🛠️ Built With
 
-1. Clone the repository:
+- **HTML5** - Semantic layout structure.
+- **CSS3 (Vanilla)** - Premium styling, custom CSS variables, flexbox/grid layouts, and smooth micro-animations.
+- **JavaScript (ES6+)** - Advanced DOM manipulation, asynchronous operations, and strict usage of Higher-Order Functions over traditional loops. 
+
+---
+
+## 📡 API Reference
+
+This application retrieves data from the **[Open Library API](https://openlibrary.org/developers/api)**.
+
+- **Search Query Endpoint**: `https://openlibrary.org/search.json?q={query}&limit={limit}`
+- **Details Endpoint**: `https://openlibrary.org{bookKey}.json`
+- **Covers API**: `https://covers.openlibrary.org/b/id/{cover_id}-M.jpg`
+
+---
+
+## 🚀 Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+### Prerequisites
+A modern web browser (Google Chrome, Mozilla Firefox, Safari, Edge) and Git installed on your system.
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
    git clone https://github.com/your-username/library.git
-
-2. Open the project folder
-
-3. Open index.html in your browser
-
----
-
-## Milestones
-
-* Milestone 1: Project setup and planning
-* Milestone 2: API integration
-* Milestone 3: Adding features
-* Milestone 4: Final deployment
+   ```
+2. **Navigate to the project directory:**
+   ```bash
+   cd library
+   ```
+3. **Run the Project:**
+   Simply open the `index.html` file in your preferred web browser. No local development server or npm installation is required!
 
 ---
 
-## Future Improvements
+## 💡 Code Highlights: Higher-Order Functions
 
-* Add pagination or load more functionality
-* Improve search performance using debouncing
-* Store favorites using local storage
-* Add infinite scrolling
+As per the project requirements, traditional `for` or `while` loops have been exclusively replaced with functional array methods:
+- **`map()`**: Used extensively to transform the raw API JSON data into HTML elements.
+- **`filter()`**: Powering the ability to sift through book arrays to display only favorites, or books matching a specific publication year.
+- **`sort()`**: Implementing the multi-criteria sorting handler algorithm.
+- **`find()`**: Used in checking and toggling states in the Favorites array.
 
 ---
 
-## Author
+## 👨‍💻 Author
 
-Prince Chhikara
-
-This project was developed as part of a JavaScript assignment.
+**Prince Chhikara**  
+*Developed as part of the JavaScript API Integration Milestone.*
